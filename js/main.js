@@ -73,12 +73,12 @@ let toastTimer;
 
 emailCopy.addEventListener('click', async () => {
   try {
-    await navigator.clipboard.writeText('jungozzim@gmail.com');
+    await navigator.clipboard.writeText('rohsuujin@gmail.com');
     toast.classList.add('show');
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
   } catch {
-    window.location.href = 'mailto:jungozzim@gmail.com';
+    window.location.href = 'mailto:rohsuujin@gmail.com';
   }
 });
 

@@ -636,14 +636,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 
 .contact-inner { text-align: center; }
 
-.contact-inner .section-title { margin-bottom: 16px; }
-
-.contact-desc {
-  max-width: 560px;
-  margin: 0 auto 32px;
-  font-size: 16.5px;
-  color: var(--text-sub);
-}
+.contact-inner .section-label { margin-bottom: 28px; }
 
 .contact-actions {
   display: flex;
