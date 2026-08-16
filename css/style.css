@@ -382,8 +382,8 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
 }
 
 .project-mono {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   display: grid;
   place-items: center;
@@ -392,6 +392,17 @@ button { font: inherit; border: none; background: none; cursor: pointer; color: 
   color: var(--accent);
   font-size: 22px;
   font-weight: 800;
+}
+
+.project-logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  object-fit: contain;
+  padding: 4px;
 }
 
 .project-title-wrap { flex: 1; min-width: 0; }
