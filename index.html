@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>노수진 · 프론트엔드 개발자 포트폴리오</title>
+  <meta name="description" content="사용자 화면과 운영자 화면, REST API, 배포 환경까지 함께 이해하는 프론트엔드 개발자 노수진(Sujin Noh)의 포트폴리오입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="노수진 · 프론트엔드 개발자 포트폴리오" />
+  <meta property="og:description" content="복잡한 업무 흐름을 직관적인 UX로 바꾸는 프론트엔드 개발자 노수진입니다. React · React Native · 배포 자동화 경험." />
+  <meta property="og:url" content="https://suucong.github.io/" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b64da'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='700' font-family='sans-serif' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo">노수진<span class="logo-dot">.</span></a>
+      <nav class="site-nav" id="siteNav" aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#activities">활동</a>
+        <a href="#values">가치관</a>
+        <a href="#contact" class="nav-cta">연락하기</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Sujin Noh · Frontend Developer</p>
+        <h1 class="hero-title">
+          복잡한 업무 흐름을<br />
+          직관적인 UX로 바꾸는<br />
+          <span class="accent">프론트엔드 개발자 노수진</span>입니다.
+        </h1>
+        <p class="hero-desc">
+          React와 React Native로 사용자 화면을 만들고, 운영자 페이지 · REST API · 배포 환경까지
+          함께 이해하며 개발합니다. 기능 구현에 그치지 않고 유지보수성과 운영까지 고려한
+          서비스를 만듭니다.
+        </p>
+        <div class="hero-chips">
+          <span class="chip">실서비스 출시 · 운영 경험</span>
+          <span class="chip">React / React Native</span>
+          <span class="chip">CI/CD · 배포 자동화</span>
+          <span class="chip">AI 활용 개발</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+          <a href="https://github.com/suucong" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label reveal">About</p>
+        <h2 class="section-title reveal">이런 개발자입니다</h2>
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <div class="about-emoji">🧭</div>
+            <h3>업무 흐름을 설계합니다</h3>
+            <p>
+              사용자 화면과 운영자(백오피스) 화면을 함께 설계·구현하며, 사용자의 신청이
+              운영자에게 전달되고 다시 화면에 반영되는 <strong>전체 흐름</strong>을 기준으로
+              기능을 점검합니다.
+            </p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-emoji">🧩</div>
+            <h3>구조로 품질을 만듭니다</h3>
+            <p>
+              반복되는 UI를 공통 컴포넌트로 분리하고 Props 주입 구조로 관리해,
+              <strong>변경에 강하고 팀원이 이해하기 쉬운 코드</strong>를 지향합니다.
+            </p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-emoji">🚀</div>
+            <h3>배포와 운영까지 책임집니다</h3>
+            <p>
+              AWS EC2, Docker Compose, GitHub Actions, Nginx·Certbot을 활용해 개발 결과물을
+              <strong>실제 서비스 환경에서 배포·운영</strong>해 본 경험이 있습니다.
+            </p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-emoji">🤝</div>
+            <h3>함께 성장합니다</h3>
+            <p>
+              동료와 적극적으로 의견을 나누며 더 나은 결과를 만들고, AI를 코드 작성·테스트·문서화에
+              활용해 <strong>팀의 생산성</strong>을 높입니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section section-soft" id="skills">
+      <div class="container">
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-title reveal">기술 스택</h2>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <h3>Frontend</h3>
+              <span class="badge badge-blue">주력 분야</span>
+            </div>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>JavaScript</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><h3>Backend</h3></div>
+            <ul class="tag-list">
+              <li>Spring Boot</li>
+              <li>REST API</li>
+              <li>JSP · 전자정부표준프레임워크</li>
+              <li>관계형 DB · ERD 설계</li>
+              <li>소셜 로그인 (구글 · 카카오 · 네이버)</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><h3>Infra &amp; DevOps</h3></div>
+            <ul class="tag-list">
+              <li>AWS EC2</li>
+              <li>GCP Compute Engine</li>
+              <li>Docker Compose</li>
+              <li>GitHub Actions (CI/CD)</li>
+              <li>Nginx · Certbot (HTTPS)</li>
+              <li>Linux · crontab</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-head"><h3>Tools &amp; AI</h3></div>
+            <ul class="tag-list">
+              <li>Git · GitHub</li>
+              <li>VSCode</li>
+              <li>IntelliJ</li>
+              <li>AI 코딩 도구 (코드 작성 · 테스트 · 문서화)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-label reveal">Projects</p>
+        <h2 class="section-title reveal">프로젝트</h2>
+
+        <!-- 크집사 -->
+        <article class="project-card reveal">
+          <div class="project-head">
+            <div class="project-mono" aria-hidden="true">크</div>
+            <div class="project-title-wrap">
+              <div class="project-title-row">
+                <h3>크집사</h3>
+                <span class="badge badge-blue">대표 프로젝트</span>
+                <span class="badge badge-gray">React Native</span>
+              </div>
+              <p class="project-meta">2025.10 ~ 2026.01 · IT 연합 동아리 팀 프로젝트 · 반응형 UI 구현 및 백엔드 연동 담당</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/CREJIPSA/CreJipsa-FE" target="_blank" rel="noopener noreferrer" aria-label="크집사 GitHub 저장소">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <p class="project-oneliner">크리에이터의 아이디어 추천·관리를 지원하는 IT 연합 동아리 애플리케이션</p>
+          <ul class="tag-list project-tags">
+            <li>React Native</li><li>Expo</li><li>JavaScript</li>
+          </ul>
+          <ul class="project-points">
+            <li>반복되는 버튼·상단바·하단바를 <strong>공통 컴포넌트로 분리</strong>하고, 화면별 데이터와 스타일을 Props로 주입하도록 구조 개선</li>
+            <li>반복되는 상태 관리 로직을 별도로 분리해 중복 코드 제거</li>
+            <li>백엔드 개발자가 쉽게 구현할 수 있도록 <strong>데이터 전달 방식 가이드라인 제안</strong></li>
+          </ul>
+          <details class="project-detail">
+            <summary>상세 보기 — 문제와 해결 과정</summary>
+            <div class="detail-body">
+              <h4>문제 상황</h4>
+              <p>
+                초기에는 기획과 디자인에 맞춰 여러 화면을 빠르게 구현하는 데 집중했습니다. 그러나 동아리
+                프로젝트 특성상 디자인이 계속 변경되었고, 버튼·상단바·하단바처럼 유사한 UI와 상태 관리
+                코드가 여러 파일에 중복되어 있었습니다. 디자인이 바뀔 때마다 같은 코드를 반복 수정해야
+                했으며, 일부 화면의 수정을 놓칠 가능성도 커졌습니다.
+              </p>
+              <h4>개선 행동</h4>
+              <ul>
+                <li>반복되는 버튼, 상단바, 하단바를 공통 컴포넌트로 분리</li>
+                <li>화면별로 달라지는 데이터와 스타일을 Props로 주입하도록 구조 개선</li>
+                <li>반복되는 상태 관리 로직을 별도로 분리</li>
+                <li>프론트엔드에서 필요한 데이터 전달 방식에 관한 가이드라인을 백엔드 팀에 제안</li>
+              </ul>
+              <h4>결과 및 배운 점</h4>
+              <p>
+                리팩터링 이후 디자인 변경 시 수정해야 하는 파일이 줄어 변경 사항을 더 빠르고 일관되게
+                반영할 수 있었습니다. 프론트엔드 개발의 품질은 화면을 빠르게 구현하는 데서 끝나는 것이
+                아니라, <strong>팀원이 이해하고 변경하기 쉬우며 지속적으로 확장할 수 있는 구조에서
+                결정된다</strong>는 점을 배웠습니다.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- 서울야외도서관 -->
+        <article class="project-card reveal">
+          <div class="project-head">
+            <div class="project-mono" aria-hidden="true">서</div>
+            <div class="project-title-wrap">
+              <div class="project-title-row">
+                <h3>서울야외도서관 웹페이지</h3>
+                <span class="badge badge-green">실서비스 운영 중</span>
+              </div>
+              <p class="project-meta">2024.04 ~ 2024.06 · 팀 3명 · 물품 대여/운영 일정 기능 및 소셜 로그인 담당</p>
+            </div>
+            <div class="project-links">
+              <a href="https://seouloutdoorlibrary.kr/user/main/mainIndex.do" target="_blank" rel="noopener noreferrer" aria-label="서울야외도서관 서비스 바로가기">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72Z"/><path fill="currentColor" d="M3.5 3.25a.25.25 0 0 0-.25.25v9c0 .14.11.25.25.25h9a.25.25 0 0 0 .25-.25V8.5a.75.75 0 0 1 1.5 0v4a1.75 1.75 0 0 1-1.75 1.75h-9A1.75 1.75 0 0 1 1.75 12.5v-9c0-.97.78-1.75 1.75-1.75h4a.75.75 0 0 1 0 1.5h-4Z"/></svg>
+                서비스 보기
+              </a>
+            </div>
+          </div>
+          <p class="project-oneliner">시민이 이용하는 물품 대여·운영 일정 기능과 이를 관리하는 운영자 페이지를 함께 개발한 공공 웹서비스</p>
+          <ul class="tag-list project-tags">
+            <li>JSP</li><li>전자정부표준프레임워크</li><li>Eclipse</li>
+          </ul>
+          <ul class="project-points">
+            <li>사용자의 물품 대여 신청부터 <strong>운영자의 상태 변경·게시물 관리까지</strong> 전체 업무 흐름 구현</li>
+            <li>운영자가 등록한 운영 일정을 사용자 화면에 공개하는 기능 구현</li>
+            <li>카카오·네이버 <strong>소셜 로그인 연동</strong> 및 담당 기능 데이터베이스 설계 참여</li>
+            <li>서비스가 계획대로 출시되어 <strong>현재도 실제 운영 중</strong></li>
+          </ul>
+          <details class="project-detail">
+            <summary>상세 보기 — 문제와 해결 과정</summary>
+            <div class="detail-body">
+              <h4>목표와 역할</h4>
+              <p>
+                3개월 안에 실제 사용자가 테스트할 수 있는 수준으로 담당 기능을 완성하는 것을 목표로
+                했습니다. 물품 대여와 운영 일정의 사용자·운영자 페이지, 카카오·네이버 소셜 로그인 연동을
+                담당했으며, 프론트엔드 개발자에게 전달받은 HTML을 JSP와 전자정부표준프레임워크 환경에
+                맞게 연결했습니다.
+              </p>
+              <h4>문제와 해결 과정</h4>
+              <p>
+                적은 인원으로 시민이 실제 이용할 공공서비스를 개발해야 했기 때문에, 제한된 기간 안에 담당
+                기능을 빠짐없이 완성해야 했습니다. 전체 개발 범위를 기능별로 구분하고 <strong>마감 기한을
+                역산해 매일 완료할 목표</strong>를 정했습니다. 개별 화면 구현에만 집중하지 않고, 사용자의
+                신청이 운영자 화면에 전달되고 운영자의 변경 사항이 다시 사용자 화면에 반영되는
+                <strong>전체 업무 흐름을 기준으로 기능을 점검</strong>했습니다.
+              </p>
+              <h4>결과 및 배운 점</h4>
+              <p>
+                담당 기능을 3개월 안에 테스트 가능한 수준으로 완성했고, 서비스는 계획대로 출시되어 현재도
+                운영 중입니다. 높은 목표일수록 해야 할 일을 구체적인 실행 단위로 나누고 매일 책임 있게
+                완수해야 한다는 점, 그리고 사용자 화면뿐 아니라 <strong>운영자가 서비스를 관리하는
+                과정까지 체계적으로 설계해야 안정적인 서비스가 완성된다</strong>는 점을 배웠습니다.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- 담앗콘 -->
+        <article class="project-card reveal">
+          <div class="project-head">
+            <div class="project-mono" aria-hidden="true">담</div>
+            <div class="project-title-wrap">
+              <div class="project-title-row">
+                <h3>담앗콘</h3>
+                <span class="badge badge-gray">CI/CD · 배포 구축</span>
+              </div>
+              <p class="project-meta">팀 프로젝트 · ERD 설계 · REST API · 배포 자동화 담당</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ITTA-DIV/Div-Backend" target="_blank" rel="noopener noreferrer" aria-label="담앗콘 GitHub 저장소">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <p class="project-oneliner">여러 사이트의 컨퍼런스 정보를 주기적으로 수집해 대학생에게 제공하는 웹서비스</p>
+          <ul class="tag-list project-tags">
+            <li>Spring Boot</li><li>Python</li><li>AWS EC2</li><li>Docker Compose</li><li>GitHub Actions</li><li>Nginx · Certbot</li>
+          </ul>
+          <ul class="project-points">
+            <li>메인 화면·이벤트 상세 조회 REST API와 댓글·좋아요 기능 구현, <strong>ERD 설계</strong></li>
+            <li>구글 로그인 및 <strong>Refresh Token</strong> 적용</li>
+            <li>크롤러를 API 서버와 분리하고 <strong>crontab 기반 주기 실행 자동화</strong></li>
+            <li>GitHub Actions + Docker Compose <strong>CI/CD 구축</strong>, Nginx·Certbot으로 HTTPS 적용</li>
+          </ul>
+          <details class="project-detail">
+            <summary>상세 보기 — 문제와 해결 과정</summary>
+            <div class="detail-body">
+              <h4>문제와 해결 과정</h4>
+              <p>
+                한 번에 수천 건의 정보를 수집하는 Python 크롤러를 어떤 방식으로 주기 실행할지
+                고민했습니다. 크롤링 작업이 Spring Boot API 서버와 자원을 공유하면 서비스 응답과 운영
+                안정성에 영향을 줄 수 있다고 판단해, <strong>크롤링 로직을 별도의 Python 스크립트로
+                분리</strong>하고 Docker Compose로 실행 환경을 구성한 뒤 EC2의 crontab을 통해 정해진
+                시간마다 실행되도록 구현했습니다.
+              </p>
+              <p>
+                처음으로 AWS EC2에 서비스를 배포하면서 자동 배포, 컨테이너 실행, Linux 명령어, HTTPS 적용
+                과정에서 여러 문제를 경험했습니다. 문제 원인을 하나씩 확인하며 GitHub Actions 기반 배포와
+                Nginx·Certbot 설정을 끝까지 완성했습니다.
+              </p>
+              <h4>배운 점</h4>
+              <ul>
+                <li>작업의 특성과 서비스에 미칠 영향을 고려해 실행 방식을 선택하는 문제 해결력</li>
+                <li>API 서버와 배치성 작업을 분리해 운영 안정성을 고려하는 관점</li>
+                <li>AWS, Docker, Linux, CI/CD를 활용해 개발 결과물을 실제 서비스 환경에서 운영하는 역량</li>
+                <li>Refresh Token의 개념과 필요성에 대한 이해</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Pro-Diction -->
+        <article class="project-card reveal">
+          <div class="project-head">
+            <div class="project-mono" aria-hidden="true">P</div>
+            <div class="project-title-wrap">
+              <div class="project-title-row">
+                <h3>Pro-Diction</h3>
+                <span class="badge badge-gray">Solution Challenge</span>
+              </div>
+              <p class="project-meta">2023.09 ~ 2023.10 · 팀 프로젝트 · 백엔드 개발 담당</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/GDG-SWU/2024-ProDiction-SolutionChallenge" target="_blank" rel="noopener noreferrer" aria-label="Pro-Diction GitHub 저장소">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <p class="project-oneliner">청각장애인의 발음 학습과 비장애인과의 원활한 소통을 지원하는 애플리케이션</p>
+          <ul class="tag-list project-tags">
+            <li>Spring Boot</li><li>GCP Compute Engine</li><li>IntelliJ</li>
+          </ul>
+          <ul class="project-points">
+            <li>실시간 <strong>수화 → 음성 변환</strong>, 상대방 <strong>음성 → 텍스트 변환</strong>으로 양방향 소통 지원</li>
+            <li>실제 발음 속도를 기준으로 한 발음 평가와 자음·모음별 입 모양 영상 기반 학습 기능</li>
+            <li>구글 로그인, 발음 레벨 테스트 온보딩, 카테고리별 단어장·검색 기능 구현</li>
+          </ul>
+          <details class="project-detail">
+            <summary>상세 보기 — 프로젝트 의의</summary>
+            <div class="detail-body">
+              <h4>주요 기능</h4>
+              <ul>
+                <li>발음 레벨 테스트 및 학습 단계 추천을 위한 온보딩</li>
+                <li>실시간 수화를 음성으로, 상대방의 음성을 텍스트로 변환</li>
+                <li>실제 발음 속도를 기준으로 한 발음 평가 및 점수 제공</li>
+                <li>자음·모음별 혀의 위치와 입 모양 영상을 활용한 발음 학습</li>
+                <li>사용자가 말한 발음을 그대로 반환하여 스스로 발음 오류를 확인하는 기능</li>
+                <li>학습 카테고리별 단어장 저장·삭제·조회, 단어·문장 검색 및 최신 검색어 관리</li>
+              </ul>
+              <h4>프로젝트 의의</h4>
+              <p>
+                수화와 음성, 음성과 텍스트 사이의 변환 기능을 통해 청각장애인과 비장애인이 별도의 학습
+                없이도 소통할 수 있도록 설계했습니다. 또한 발음 결과를 단순 점수로만 보여주는 것이 아니라,
+                사용자의 발음이 실제로 어떻게 들렸는지 반환해 <strong>스스로 오류를 인지할 수 있도록</strong>
+                했습니다.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- 버틸집 -->
+        <article class="project-card reveal">
+          <div class="project-head">
+            <div class="project-mono" aria-hidden="true">버</div>
+            <div class="project-title-wrap">
+              <div class="project-title-row">
+                <h3>버틸집</h3>
+                <span class="badge badge-purple">공모전</span>
+              </div>
+              <p class="project-meta">공모전 프로젝트 · AI 도구를 활용한 개발 생산성 향상 경험</p>
+            </div>
+          </div>
+          <p class="project-oneliner">청년의 조건에 맞는 금융상품과 지원정책을 조합해 주거비용 플랜을 제시하는 서비스</p>
+          <ul class="tag-list project-tags">
+            <li>AI 활용 개발</li><li>금융·정책 데이터</li>
+          </ul>
+          <ul class="project-points">
+            <li>여러 은행의 청년 대상 금융상품과 <strong>청년 전용 대출·월세 지원정책을 조합</strong>한 복수의 주거 플랜 제공</li>
+            <li>플랜별 예상 주거비용 계산 및 비교 기능</li>
+            <li>AI 도구를 <strong>코드 작성·테스트·문서화에 활용</strong>해 개발 과정을 효율화</li>
+          </ul>
+          <details class="project-detail">
+            <summary>상세 보기 — AI 활용 경험</summary>
+            <div class="detail-body">
+              <h4>AI 활용 경험</h4>
+              <p>
+                AI 도구를 코드 작성, 테스트, 문서화에 활용하며 개발 과정을 효율화했습니다. 이를 통해 AI를
+                단순 질의 도구가 아니라 <strong>개발 산출물 작성과 검증, 정리를 지원하는 생산성
+                도구</strong>로 활용해 본 경험을 쌓았습니다.
+              </p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Activities ===== -->
+    <section class="section section-soft" id="activities">
+      <div class="container">
+        <p class="section-label reveal">Activities</p>
+        <h2 class="section-title reveal">활동</h2>
+        <div class="activity-grid">
+          <article class="activity-card reveal">
+            <div class="activity-head">
+              <h3>TAVE 운영진</h3>
+              <span class="badge badge-gray">동아리 운영</span>
+            </div>
+            <ul class="activity-list">
+              <li>신규 회원 선발 및 회원 관리</li>
+              <li>동아리 행사 기획·운영</li>
+              <li>재정 및 회계 관리</li>
+              <li>외부 제휴 추진과 협업</li>
+            </ul>
+            <p class="activity-note">
+              운영진들과 의견을 거리낌 없이 공유하며 새로운 행사와 제휴 아이디어를 구체화했습니다.
+              자유롭게 의견을 주고받는 환경이 개인의 생각을 발전시키고 더 나은 결과를 만든다는 점을
+              배웠고, 회원과 외부 파트너 등 다양한 관계자의 입장을 고려하며 책임감 있게 조직을
+              운영했습니다.
+            </p>
+          </article>
+          <article class="activity-card reveal">
+            <div class="activity-head">
+              <h3>미국 교환학생</h3>
+              <span class="badge badge-gray">2024.08 ~ 2025.06</span>
+            </div>
+            <p class="activity-note">
+              2개 학기 동안 미국에서 생활하고 학업을 수행하며, 새로운 환경에 대한
+              <strong>적응력과 독립적인 문제 해결 태도</strong>를 길렀습니다. 낯선 환경에서도 스스로
+              부딪히며 해결해 나가는 경험은 새로운 기술과 도메인을 빠르게 학습하는 밑거름이 되었습니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Values ===== -->
+    <section class="section" id="values">
+      <div class="container">
+        <p class="section-label reveal">Values</p>
+        <h2 class="section-title reveal">지향하는 개발, 앞으로의 목표</h2>
+        <div class="values-grid">
+          <div class="values-col reveal">
+            <h3 class="values-heading">이런 개발을 지향합니다</h3>
+            <ol class="values-list">
+              <li>단순한 화면 구현을 넘어, 사용자의 복잡한 업무 흐름을 직관적인 UX로 전환합니다.</li>
+              <li>반복되는 UI를 공통 컴포넌트와 일관된 구조로 관리해 유지보수성과 팀 생산성을 높입니다.</li>
+              <li>사용자 페이지와 운영자 페이지, REST API, 배포 환경을 함께 이해하며 개발합니다.</li>
+              <li>AI를 코드 작성·테스트·문서화에 활용해 개발 생산성을 높입니다.</li>
+            </ol>
+          </div>
+          <div class="values-col reveal">
+            <h3 class="values-heading">앞으로 이렇게 성장하겠습니다</h3>
+            <ol class="values-list">
+              <li>현업 사용자와 적극적으로 소통해 실제 업무의 불편과 요구사항을 개발 과제로 구조화합니다.</li>
+              <li>사용자가 더 빠르고 정확하게 일할 수 있는 백오피스 UX를 설계합니다.</li>
+              <li>공통 UI 구조를 통해 수정 누락을 줄이고 변경 속도와 일관성을 높입니다.</li>
+              <li>AI 기반 개발 방식을 활용해 코드 작성·테스트·문서화의 생산성을 높입니다.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-inner">
+        <p class="section-label reveal">Contact</p>
+        <h2 class="section-title reveal">함께 성장할 팀을 찾고 있습니다</h2>
+        <p class="contact-desc reveal">
+          동료와 적극적으로 의견을 나누며 함께 성장할 수 있는 환경, 그리고 제가 만든 결과가
+          사용자와 사업 성과에 직접 기여하는 환경에서 일하고 싶습니다.
+        </p>
+        <div class="contact-actions reveal">
+          <a href="mailto:jungozzim@gmail.com" class="btn btn-primary btn-lg">이메일 보내기</a>
+          <a href="https://github.com/suucong" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <button class="email-copy reveal" id="emailCopy" type="button" aria-label="이메일 주소 복사">
+          jungozzim@gmail.com
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path fill="currentColor" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 노수진 (Sujin Noh). All rights reserved.</p>
+      <p class="footer-sub">Vanilla HTML / CSS / JS로 제작 · GitHub Pages로 배포</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">이메일 주소가 복사되었습니다 ✓</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
